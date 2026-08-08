@@ -1,0 +1,90 @@
+:root {
+  --neon-blue: #00f0ff;
+  --bg-dark: #05050f;
+  --panel-bg: #0c0c1a;
+  --text-bright: #e8f7ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: radial-gradient(ellipse at center, #0a0a1a 0%, #020208 100%);
+  color: var(--text-bright);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.neon-title {
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00f0ff, #7b2fff, #ff00aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--neon-blue);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.neon-input {
+  background: #0a0a14 !important;
+  border: 1px solid var(--neon-blue) !important;
+  color: #fff !important;
+  border-radius: 12px 0 0 12px !important;
+}
+.neon-input:focus {
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.4) !important;
+}
+.neon-input::placeholder { color: #6a8a9a; }
+
+.btn-neon {
+  background: transparent;
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+  border-radius: 0 12px 12px 0;
+  padding: 0 1.2rem;
+}
+.btn-neon:hover {
+  background: var(--neon-blue);
+  color: #000;
+  box-shadow: 0 0 18px var(--neon-blue);
+}
+
+.weather-card {
+  background: linear-gradient(145deg, #0d0d1f, #12122a);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 18px;
+  padding: 1.5rem;
+  position: relative;
+  min-height: 280px;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}
+.weather-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 28px rgba(0, 240, 255, 0.3);
+}
+
+.weather-card .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #ff5577;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.city-name { font-size: 1.4rem; font-weight: 700; color: #fff; }
+.country { font-size: 0.9rem; color: var(--neon-blue); }
+.temp { font-size: 3rem; font-weight: 800; color: #fff; text-shadow: 0 0 12px rgba(0, 240, 255, 0.5); }
+.desc { text-transform: capitalize; font-size: 1.05rem; color: #b8e0ff; }
+.weather-icon { font-size: 4.5rem; }
+.extra-info { font-size: 0.85rem; color: #8ab; margin-top: 1rem; }
+.msg-error { color: #ff5577; }
+.msg-loading { color: var(--neon-blue); }
